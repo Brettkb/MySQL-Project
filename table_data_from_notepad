@@ -1,0 +1,57 @@
+CREATE TABLE `sys`.`students` (
+  `students_id` INT NOT NULL AUTO_INCREMENT,
+  `students_name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`students_id`),
+  UNIQUE INDEX `Students_id_UNIQUE` (`students_id` ASC) VISIBLE);
+
+
+CREATE TABLE `sys`.`course` (
+  `course_id` INT NOT NULL AUTO_INCREMENT,
+  `course_names` VARCHAR(45) NULL,
+  `course_user_id` INT NULL,
+  PRIMARY KEY (`course_id`),
+  UNIQUE INDEX `course_id_UNIQUE` (`course_id` ASC) VISIBLE,
+  CONSTRAINT `course_students_id`
+    FOREIGN KEY (`course_id`)
+    REFERENCES `sys`.`students` (`students_id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION);
+
+
+ALTER TABLE `sys`.`course` 
+DROP FOREIGN KEY `course_students_id`;
+ALTER TABLE `sys`.`course` 
+CHANGE COLUMN `course_user_id` `course_students_id` INT NOT NULL ;
+ALTER TABLE `sys`.`course` 
+ADD CONSTRAINT `course_students_id`
+  FOREIGN KEY (`course_id`)
+  REFERENCES `sys`.`students` (`students_id`)
+  ON DELETE CASCADE
+  ON UPDATE NO ACTION;
+
+
+CREATE TABLE `sys`.`professor` (
+  `professor_id` INT NOT NULL AUTO_INCREMENT,
+  `professor_name` VARCHAR(45) NULL,
+  `professor_students_id` INT NOT NULL,
+  PRIMARY KEY (`professor_id`),
+  UNIQUE INDEX `professor_id_UNIQUE` (`professor_id` ASC) VISIBLE,
+  INDEX `professor_student_id_idx` (`professor_students_id` ASC) VISIBLE,
+  CONSTRAINT `professor_student_id`
+    FOREIGN KEY (`professor_students_id`)
+    REFERENCES `sys`.`students` (`students_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+CREATE TABLE `sys`.`grades` (
+  `grades_percentage` INT NOT NULL AUTO_INCREMENT,
+  `grades_students_id` INT NOT NULL,
+  PRIMARY KEY (`grades_percentage`),
+  UNIQUE INDEX `grades_percentage_UNIQUE` (`grades_percentage` ASC) VISIBLE,
+  INDEX `grades_students_id_idx` (`grades_students_id` ASC) VISIBLE,
+  CONSTRAINT `grades_students_id`
+    FOREIGN KEY (`grades_students_id`)
+    REFERENCES `sys`.`students` (`students_id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION);
