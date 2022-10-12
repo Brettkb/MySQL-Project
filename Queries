@@ -1,0 +1,56 @@
+#1#
+
+SELECT professor_name , AVG(grades_percentage)
+from grades
+INNER JOIN professor
+ON grades.grades_professor_id = professor.professor_id
+GROUP BY grades_professor_id;
+
+#2#
+
+SELECT DISTINCT
+s.students_name AS "student",
+MAX(g.grades_percentage) AS "TopGrade"
+FROM students AS s
+	LEFT JOIN grades AS g
+	ON s.students_id = g.grades_students_id
+GROUP BY s.students_name
+ORDER BY s.students_name ASC;
+
+
+#3#
+SELECT
+c.course_name "Course Name",
+s.students_name AS "Student"
+FROM
+course c
+    LEFT JOIN students AS s 
+    ON c.course_students_id = s.students_id
+ORDER BY c.course_name DESC;
+
+
+#4#
+
+SELECT DISTINCT
+c.course_name AS "course",
+AVG(g.grades_percentage) AS "avgGrade"
+FROM course AS c
+	LEFT JOIN grades AS g
+	ON g.grades_course_id = c.course_id
+GROUP BY c.course_name
+ORDER BY AVG(g.grades_percentage) ASC;
+
+
+#5#
+
+SELECT
+s.students_name AS "Student",
+p.professor_name AS "Professor",
+COUNT(DISTINCT c.course_id) AS "Counter"
+FROM course AS c
+	INNER JOIN professor AS p
+    ON c.course_professor_id = p.professor_id
+    INNER JOIN students AS s
+    ON c.course_students_id = s.students_id
+GROUP BY s.students_name, p.professor_name
+ORDER BY Counter DESC;
