@@ -1,3 +1,6 @@
+//I think I copied all of this correctly while I was making my table - can try this though as its a lot less to copy over.
+Hopefully it generates correctly.  If not, best to use the MySQL data dump version "TableData from MySQL" <- definitely more in-depth.
+
 CREATE TABLE `sys`.`students` (
   `students_id` INT NOT NULL AUTO_INCREMENT,
   `students_name` VARCHAR(45) NOT NULL,
