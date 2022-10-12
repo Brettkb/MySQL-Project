@@ -1,0 +1,145 @@
+INSERT INTO students(students_id, students_name)
+VALUES (1, "Jon");
+
+INSERT INTO students(students_id, students_name)
+VALUES (2, "Ian");
+
+INSERT INTO students(students_id, students_name)
+VALUES (3, "Jessie");
+
+INSERT INTO students(students_id, students_name)
+VALUES (4, "Xavier");
+
+INSERT INTO students(students_id, students_name)
+VALUES (5, "Tyren");
+
+INSERT INTO students(students_id, students_name)
+VALUES (6, "Keira");
+
+INSERT INTO students(students_id, students_name)
+VALUES (7, "Rashad");
+
+INSERT INTO students(students_id, students_name)
+VALUES (8, "Ioan");
+
+INSERT INTO students(students_id, students_name)
+VALUES (9, "Derrick");
+
+INSERT INTO students(students_id, students_name)
+VALUES (10, "Parker");
+
+
+
+
+
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (1, 93, 1, 1, 1);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (2, 94, 2, 3, 4);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (3, 93, 1, 1, 1);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (4, 99, 3, 4, 3);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (5, 87, 5, 2, 5);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (6, 84, 6, 6, 6);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (7, 91, 7, 7, 7);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (8, 90, 8, 8, 8);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (9, 100, 9, 9, 9);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (10, 81, 10, 10, 10);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (11, 86, 2, 4, 12);
+
+INSERT INTO grades(grades_id, grades_percentage, grades_students_id, grades_professor_id, grades_course_id)
+VALUES (12, 88, 7, 9, 11);
+
+
+
+
+INSERT INTO professor(professor_id, professor_name)
+VALUES (1, "McGonagal");
+
+INSERT INTO professor(professor_id, professor_name)
+VALUES (2, "Smith");
+
+INSERT INTO professor(professor_id, professor_name)
+VALUES (3, "Jenkins");
+
+INSERT INTO professor(professor_id, professor_name)
+VALUES (4, "Spencer");
+
+INSERT INTO professor(professor_id, professor_name)
+VALUES (5, "Gallagher");
+
+INSERT INTO professor(professor_id, professor_name)
+VALUES (6, "McClung");
+
+INSERT INTO professor(professor_id, professor_name)
+VALUES (7, "Bolton");
+
+INSERT INTO professor(professor_id, professor_name)
+VALUES (8, "Adams");
+
+INSERT INTO professor(professor_id, professor_name)
+VALUES (9, "Blake");
+
+INSERT INTO professor(professor_id, professor_name)
+VALUES (10, "Harrison");
+
+
+
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (1, "HTML/CSS", 1, 1);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (2, "Javascript", 2, 2);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (3, "Python", 3, 3);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (4, "React", 4, 4);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (5, "HTML/CSS", 5, 5);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (6, "Javascript", 6, 6);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (7, "Python", 7, 7);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (8, "React", 8, 8);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (9, "React", 9, 9);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (10, "Javascript", 10, 10);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (11, "Python", 7, 9);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (12, "Javascript", 2, 4);
+
+INSERT INTO course(course_id, course_name, course_professor_id, course_students_id)
+VALUES (13, "HTML/CSS", 7, 7);
